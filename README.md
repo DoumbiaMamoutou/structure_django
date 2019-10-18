@@ -1,13 +1,15 @@
 # structure_django
 ```
-#I- Comment installer django
+
+# I- Comment installer django
 #I-1 Intall Django mac os
 ##Setup 1
 ###Vérifier que python est installé
+
 ```
 $ python3
 ```
-##Setup 2: créer un environnement virtuel
+```##Setup 2: créer un environnement virtuel```
 
 ```
 $ python3 -m venv venv
@@ -89,4 +91,24 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
+```
+
+# II- Model et Admin
+## II-1 Models
+#### ici nous allons profiter de l'ORM de django
+
+### Models
+```
+statut = models.BooleanField(default=False)
+   created_at = models.DateTimeField(auto_now_add=True)
+   updated_at = models.DateTimeField(auto_now=True)
+   
+   
+   post = models.ForeignKey(Post, on_delete=models.CASCADE,related_name="post_article", null=true)
+   
+   python manage.py makemigrations
+   python manage.py migrate
+   
+   pip freeze
+   pip freeze > requirements.txt
 ```
