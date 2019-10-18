@@ -1,21 +1,19 @@
 # structure_django
 ’
-structure_django/  
-├─────────────── structure_django/  
-│                ├── __inti__.py
-│                ├── settings.py
-│                ├── urls.py
-│                ├── wsgi.py
-├─────────────── manage.py  
-├─────────────── static/  
-│                ├── ....css
-│                ├── ....js  
-│                ├── ....* 
-├─────────────── templates/  
-│                ├── bases/  
-│                │    ├── home_base.html
-│                │    ├── page_base.html
-│                ├── pages
-│                │    ├── index.html
-│                │    ├── ....html
+#settings.py
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': ['templates'],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 ’
