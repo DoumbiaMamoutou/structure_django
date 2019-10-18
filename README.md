@@ -1,5 +1,53 @@
 # structure_django
 ```
+#I- Comment installer django
+#I-1 Intall Django mac os
+##Setup 1
+###Vérifier que python est installé
+```
+$ python3
+```
+##Setup 2: créer un environnement virtuel
+
+```
+$ python3 -m venv venv
+```
+##Setup 3: activer l'environnement virtuel
+
+```
+$ source venv/bin/activate
+```
+##Setup 4:Installer Django
+```
+$ pip3 install Django
+```
+
+##Setup 6:Création de notre projet
+
+```
+$ django-admin startproject myproject
+
+```
+```
+myproject/
+    bd.sqlite3        #Base de données par defaut
+    manage.py         #manage.py va nous aider a lancer les commande
+    myproject/        #application core
+        __init__.py   #fichier init de python a ne pas supprimer
+        settings.py   #fichier de configuration
+        urls.py       #gestion de routage
+        wsgi.py       #Utile pour le deploiement
+
+```
+##Setup 7: lancer le serveur django
+```
+$ cd myproject
+$ python3 manage.py runserver
+```
+
+```
+
+```
 #settings.py projet
 TEMPLATES = [
     {
