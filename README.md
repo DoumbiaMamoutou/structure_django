@@ -102,6 +102,10 @@ if settings.DEBUG:
 statut = models.BooleanField(default=False)
    created_at = models.DateTimeField(auto_now_add=True)
    updated_at = models.DateTimeField(auto_now=True)
+   status = models.BooleanField(default=True)
+   nom = models.CharField(max_length=255)
+   description = models.TextField()
+   
    
    
    post = models.ForeignKey(Post, on_delete=models.CASCADE,related_name="post_article", null=true)
